@@ -2,14 +2,17 @@ title: Sobre o Átila
 
 * Graduando em Ciência da Computação pelo IFCE Campus Maracanaú.
 * 8 anos de experiência com Linux.
-* Organizador do COMSOLiD a 7 anos.
+* Organizador do COMSOLiD a 6 anos.
+* Aficcionado por JavaScript.
 
 ---
 
 title: Sobre o Samir
 
 * Graduando em Ciência da Computação pelo IFCE Campus Maracanaú.
-* Organizador do COMSOLiD a 5 anos.
+* Organizador do COMSOLiD a 6 anos.
+* Programador desde menino (1900 e não interessa...).
+* Gosta de estudar novas tecnologias.
 
 ---
 
@@ -51,6 +54,42 @@ title: Outros componentes
 * Piezo
 * LCD
 * RFID
+
+---
+
+title: JavaScript
+class: segue nobackground fill
+image: img/javascript-logo-wallpaper.jpg
+
+---
+
+title: JavaScript
+
+Criado em 1995 por Brendan Eich, na NetScape.
+
+Originalmente foi criado para dar vida as páginas web.
+
+Em 2009 nasceu o NodeJS, uma forma de executar JavaScript fora do browser.
+
+---
+
+class: segue nobackground fill
+image: img/nodejs-logo-wallpaper.jpg
+
+---
+
+title: NodeJS
+
+Criado por Ryan Dahl, é uma ambiente de execução multi-plataforma,
+de código aberto para aplicativos JavaScript no lado do servidor.
+
+## Instalação
+
+<pre>
+$ sudo apt-get install nodejs
+</pre>
+
+Instala o `node` (ambiente de execução) e o `npm` (instalador de módulos)
 
 ---
 
@@ -173,3 +212,30 @@ title: Johnny-Five - Exemplo
 content_class: flexbox vcenter
 
 <p><img alt="led strobe" src="img/led-strobe.png" style="width: 65%" class="center" /></p>
+
+---
+
+title: Controle Remote Infravermelho
+class: segue nobackground fill
+image: img/popcorntime-ir-remote.jpg
+
+---
+
+title: Controle Remote Infravermelho
+
+Para nosso exemplo vamos usar um Controle Remote Infravermelho para
+controlar o **Popcorntime**, uma aplicativo que permite assistir Filmes,
+Séries e Animes através de stream de torrent.
+
+---
+
+title: Controle Remote Infravermelho
+subtitle: Como isso é feito?
+
+Precisamos primeiro capturar os dados enviados pelo controle e decodificá-los.
+
+Após decodificação, é necessário enviar para a porta serial qual o comando
+para aquele botão.
+
+
+
