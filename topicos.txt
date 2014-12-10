@@ -1,0 +1,37 @@
+Tópicos da palestra
+
+Arduino
+
+O que é?
+Quanto custa?
+Editor de Componentes Fritzing <http://fritzing.org/home/>
+Outros componentes
+Wi-Fi
+Ethernet
+IR
+Sensores de Força, Luz, Temperatura, Presença, Proximidade, Toque
+Led
+
+Javascript
+
+Cylon <http://cylonjs.com/>
+Instalação básica Ubuntu
+Exemplo
+
+Johnny Five <https://github.com/rwaldron/johnny-five>, <http://nodebots.io/>
+Instalação básica Ubuntu
+Exemplo
+
+Exemplo
+Controle Remoto Infravermelho para controlar PopcornTime
+
+PopcornTime <https://popcorntime.io/>
+
+Como funciona o IR?
+
+Como obter os dados enviados pelo IR?
+
+<https://github.com/voodootikigod/node-serialport>
+
+Servidor: python -m SimpleHTTPServer
+

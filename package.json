@@ -1,0 +1,17 @@
+{
+  "name": "arduino-javascript-slides",
+  "version": "0.0.0",
+  "description": "Slides from presentation Arduino & JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Átila Camurça <camurca.home@gmail.com>",
+  "license": "CC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^1.0.0",
+    "time-grunt": "^1.0.0"
+  }
+}
