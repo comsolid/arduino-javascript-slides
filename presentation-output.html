@@ -110,7 +110,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Arduino Starter Kit</h2>
       <h3></h3>
     </hgroup>
-    <article class="flexbox vcenter"><p><img alt="Arduino Starter Kit" src="img/arduino-kit.jpg" style="width: 80%" class="center" /></p>
+    <article class="flexbox vcenter"><p><img alt="Arduino Starter Kit" src="img/arduino-kit.jpg" style="width: 75%" class="center" /></p>
 
 <h3><strong>USD 39,00</strong> ou <strong>R$ 100,70</strong></h3></article>
  
@@ -136,16 +136,161 @@ URL: https://code.google.com/p/io-2012-slides
  
 </slide>
 
-<slide class="segue nobackground fill" style="background-image: url(img/javascript-logo-wallpaper.jpg)">
+<slide class="segue nobackground fill" style="background-image: url(img/cylon-logo-wallpaper.jpg)">
   
     <aside class="gdbar"><img src="img/logo.png"></aside>
     <hgroup class="auto-fadein">
       
-      <h2>JavaScript</h2>
+      
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Cylon.js</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p>Cylon.js é uma framework javascript para robôs, física computacional, e
+Internet das Coisas. </p>
+<p>Plataformas suportadas:</p>
+<ul>
+<li>Arduino</li>
+<li>Beaglebone</li>
+<li>Intel Edison</li>
+<li>Leap Motion</li>
+<li>OpenCV</li>
+<li>Raspberry Pi</li>
+<li>Tessel, entre outras.</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Cylon.js - Exemplo</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><h2>Instalação</h2>
+<pre>
+$ mkdir project
+$ cd project
+$ npm init
+$ npm install cylon cylon-firmata --save
+$ node index.js
+</pre></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Cylon.js - Exemplo</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="javascript">
+var Cylon = require("cylon");
+
+Cylon.robot({
+  connections: {
+    arduino: { adaptor: 'firmata', port: '/dev/ttyUSB0' }
+  },
+
+  devices: {
+    led: { driver: 'led', pin: 13 }
+  },
+
+  work: function(my) {
+    every((1).second(), function() {
+      my.led.toggle();
+    });
+  }
+}).start();
+</pre></article>
+ 
+</slide>
+
+<slide class="segue nobackground fill" style="background-image: url(img/johnny-five-logo-wallpaper.jpg)">
+  
+    <aside class="gdbar"><img src="img/logo.png"></aside>
+    <hgroup class="auto-fadein">
       
       
     </hgroup>
   
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Johnny-Five</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p>Johnny-Five é uma framework javascript para robôs, Internet das Coisas
+desenvolvido na Bocoup.</p>
+<p>Plataformas suportadas:</p>
+<ul>
+<li>Arduino</li>
+<li>Beaglebone</li>
+<li>Eletric Imp</li>
+<li>Intel Galileo &amp; Edison</li>
+<li>Pinoccio</li>
+<li>Raspberry Pi, entre outras.</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Johnny-Five - Exemplo</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><h2>Instalação</h2>
+<pre>
+$ mkdir project
+$ cd project
+$ npm init
+$ npm install johnny-five --save
+$ node index.js
+</pre></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Johnny-Five - Exemplo</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="javascript">
+var five = require("johnny-five"),
+  board, led;
+
+board = new five.Board();
+
+board.on("ready", function() {
+
+  // Create a standard `led` hardware instance
+  led = new five.Led(13);
+
+  // "strobe" the led in 100ms on-off phases
+  led.strobe(100);
+});
+</pre></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Johnny-Five - Exemplo</h2>
+      <h3></h3>
+    </hgroup>
+    <article class="flexbox vcenter"><p><img alt="led strobe" src="img/led-strobe.png" style="width: 65%" class="center" /></p></article>
+ 
 </slide>
 
 
