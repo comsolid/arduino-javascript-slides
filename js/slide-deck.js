@@ -363,7 +363,7 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       }
     } else {
       for (var i = 0, p; p = presenters[i]; ++i) {
-      	var twitter = p.twitter ? '<br><span>twitter</span>' +
+      	var twitter = p.twitter ? '<br><span>twitter</span> ' +
           '<a href="http://twitter.com/' + p.twitter + '">' +
           p.twitter + '</a>' : '';
         html.push(p.name + ' - ' + p.company + twitter);

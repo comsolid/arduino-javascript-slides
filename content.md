@@ -265,6 +265,19 @@ image: img/rc4pt-arduino-ide.png
 
 ---
 
+title: Sketch do projeto
+
+<object type="image/svg+xml" data="img/Sketch_bb.svg" 
+	width="900" border="1"></object>
+
+---
+
+title: Sketch do projeto
+
+<p><img alt="led strobe" src="img/Sketch_Esquematico.png" style="width: 80%" class="center" /></p>
+
+---
+
 title: Usando 'serialport' para ler da porta serial
 
 <pre class="prettyprint" data-lang="javascript">
