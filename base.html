@@ -58,8 +58,12 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
   {% else %}
     <hgroup>
+      {% if slide.title %}
       <h2>{{- slide.title -}}</h2>
+      {% endif %}
+      {% if slide.subtitle %}
       <h3>{{- slide.subtitle -}}</h3>
+      {% endif %}
     </hgroup>
     <article {% if slide.content_class %}class="{{- slide.content_class -}}"{% endif %}>
     {{- slide.content -}}
@@ -72,7 +76,7 @@ URL: https://code.google.com/p/io-2012-slides
   <aside class="gdbar right"><img src="img/logo.png"></aside>
   <article class="flexbox vleft auto-fadein">
     <h2>&lt;Obrigado pela aten&ccedil;&atilde;o!&gt;</h2>
-    <p>Important contact information goes here.</p>
+    <p>Qualquer d&uacute;vida entre em contato.</p>
   </article>
   <p class="auto-fadein" data-config-contact>
     <!-- populated from slide_config.json -->

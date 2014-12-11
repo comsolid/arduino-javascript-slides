@@ -215,6 +215,20 @@ content_class: flexbox vcenter
 
 ---
 
+title: Entretanto...
+content_class: flexbox vcenter
+
+<p class="big text-center">
+Cylon.js e Johnny-Five ainda não dão suporte a infravermelho!
+</p>
+
+<p class="big text-center">
+O que fazer para contornar isso?
+</p>
+(Por enquanto...)
+
+---
+
 title: Controle Remote Infravermelho
 class: segue nobackground fill
 image: img/popcorntime-ir-remote.jpg
@@ -237,5 +251,110 @@ Precisamos primeiro capturar os dados enviados pelo controle e decodificá-los.
 Após decodificação, é necessário enviar para a porta serial qual o comando
 para aquele botão.
 
+---
 
+title: Mapeamento dos botões
+class: nobackground fill
+image: img/rc4pt-arduino-mapeamento-botoes.png
+
+---
+
+title: Enviando comandos para porta serial
+class: nobackground fill
+image: img/rc4pt-arduino-ide.png
+
+---
+
+title: Usando 'serialport' para ler da porta serial
+
+<pre class="prettyprint" data-lang="javascript">
+'use strict';
+
+var api = require('./popcorn/api')
+    , com = require('serialport');
+
+var serialPort = new com.SerialPort('/dev/ttyUSB0', {
+    baudrate: 9600,
+    parser: com.parsers.readline('\r\n')
+});
+
+serialPort.on('open',function() {
+    console.log('Port open');
+});
+</pre>
+
+---
+
+title: Usando 'serialport' para ler da porta serial
+
+<pre class="prettyprint" data-lang="javascript">
+serialPort.on('data', function(data) {
+
+    function callback(error, response, body) {
+        if (!error && response.statusCode === 200) {
+            api.parseAndSend(data);
+        } else {
+            console.log(error);
+        }
+    }
+
+    api.send('ping', [], callback);
+});
+</pre>
+
+---
+
+title: Fazendo parse dos comandos lidos da serial
+
+<pre class="prettyprint" data-lang="javascript">
+if (<b>/^rc4pt:(.*)$/</b>.test(value)) {
+    /* ... */
+    this.send('getviewstack', [], function(error, response, data) {
+        if (!error && response.statusCode === 200) {
+            /* ... */
+            switch (currentView) {
+                case <b>'main-browser'</b>:
+                    self.handleMainBrowser(cmd);
+                    break;
+                case <b>'player'</b>:
+                    self.handlePlayer(cmd);
+                    break;
+				/* ... */
+            }
+        }
+    });
+}
+</pre>
+
+---
+
+title: Fazendo parse dos comandos lidos da serial
+
+<pre class="prettyprint" data-lang="javascript">
+Api.prototype.handlePlayer = function(cmd) {
+    switch (cmd) {
+        case <b>'play-pause'</b>:
+            this.send('toggleplaying');
+            break;
+        case <b>'func-stop'</b>:
+            this.send('togglefullscreen');
+            break;
+        case <b>'down'</b>:
+            this.send('back');
+            break;
+    }
+};
+</pre>
+
+---
+
+title: github.com/comsolid/rc4pt-arduino
+class: nobackground fill
+image: img/rc4pt-arduino-repo.png
+
+---
+
+title: github.com/comsolid/rc4pt-node
+class: nobackground fill
+image: img/rc4pt-node-repo.png
 
