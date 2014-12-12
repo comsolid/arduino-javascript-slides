@@ -117,6 +117,21 @@ Plataformas suportadas:
 
 title: Cylon.js - Exemplo
 
+Antes de começar, é necessário instalar a `firmata` padrão:
+
+* Baixe o Arduino IDE
+* Plugue seu Arduino na USB
+* Abra o Arduino IDE, selecione no menu: `Arquivo → Examples → Firmata → Standard Firmata`
+* Clique no botão `Upload`
+
+---
+
+title: Cylon.js - Exemplo
+
+## Website
+
+<http://cylonjs.com>
+
 ## Instalação
 
 <pre>
@@ -126,6 +141,8 @@ $ npm init
 $ npm install cylon cylon-firmata --save
 $ node index.js
 </pre>
+
+<p><img alt="cylon website" src="img/cylonjs-website.gif" style="width: 15%" class="center" /></p>
 
 ---
 
@@ -176,6 +193,21 @@ Plataformas suportadas:
 
 title: Johnny-Five - Exemplo
 
+Antes de começar, é necessário instalar a `firmata` padrão:
+
+* Baixe o Arduino IDE
+* Plugue seu Arduino na USB
+* Abra o Arduino IDE, selecione no menu: `Arquivo → Examples → Firmata → Standard Firmata`
+* Clique no botão `Upload`
+
+---
+
+title: Johnny-Five - Exemplo
+
+## Website
+
+<https://github.com/rwaldron/johnny-five>
+
 ## Instalação
 
 <pre>
@@ -185,6 +217,8 @@ $ npm init
 $ npm install johnny-five --save
 $ node index.js
 </pre>
+
+<p><img alt="johnny-five repo" src="img/johnny-five-repo.gif" style="width: 15%" class="center" /></p>
 
 ---
 
@@ -219,7 +253,7 @@ title: Entretanto...
 content_class: flexbox vcenter
 
 <p class="big text-center">
-Cylon.js e Johnny-Five ainda não dão suporte a infravermelho!
+Cylon.js e Johnny-Five ainda não dão suporte ao receptor infravermelho!
 </p>
 
 <p class="big text-center">
@@ -274,7 +308,7 @@ title: Sketch do projeto
 
 title: Sketch do projeto
 
-<p><img alt="led strobe" src="img/Sketch_Esquematico.png" style="width: 80%" class="center" /></p>
+<p><img alt="sketch" src="img/Sketch_Esquematico.png" style="width: 80%" class="center" /></p>
 
 ---
 
