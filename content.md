@@ -405,3 +405,11 @@ title: github.com/comsolid/rc4pt-node
 class: nobackground fill
 image: img/rc4pt-node-repo.png
 
+---
+
+title: Onde baixar a apresentação?
+content_class: flexbox vcenter
+
+## [github.com/comsolid/arduino-javascript-slides](https://github.com/comsolid/arduino-javascript-slides)
+
+<p><img alt="arduino-javascript-slides" src="img/arduino-javascript-slides-repo-qrcode.gif" style="width: 130%" class="center" /></p>
