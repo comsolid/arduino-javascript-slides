@@ -101,7 +101,7 @@ image: img/cylon-logo-wallpaper.jpg
 title: Cylon.js
 
 Cylon.js é uma framework javascript para robôs, física computacional, e
-Internet das Coisas. 
+Internet das Coisas.
 
 Plataformas suportadas:
 
@@ -301,7 +301,7 @@ image: img/rc4pt-arduino-ide.png
 
 title: Sketch do projeto
 
-<object type="image/svg+xml" data="img/Sketch_bb.svg" 
+<object type="image/svg+xml" data="img/Sketch_bb.svg"
 	width="900" border="1"></object>
 
 ---
@@ -335,17 +335,17 @@ serialPort.on('open',function() {
 title: Usando 'serialport' para ler da porta serial
 
 <pre class="prettyprint" data-lang="javascript">
-serialPort.on('data', function(data) {
+serialPort.on(<b>'data'</b>, function(data) {
 
     function callback(error, response, body) {
-        if (!error && response.statusCode === 200) {
-            api.parseAndSend(data);
+        if (!error && <b>response.statusCode === 200</b>) {
+            <b>api.parseAndSend(data);</b>
         } else {
             console.log(error);
         }
     }
 
-    api.send('ping', [], callback);
+    api.send(<b>'ping'</b>, [], callback);
 });
 </pre>
 
@@ -413,3 +413,9 @@ content_class: flexbox vcenter
 ## [github.com/comsolid/arduino-javascript-slides](https://github.com/comsolid/arduino-javascript-slides)
 
 <p><img alt="arduino-javascript-slides" src="img/arduino-javascript-slides-repo-qrcode.gif" style="width: 130%" class="center" /></p>
+
+---
+
+title: Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XdGIXM8NkCI" frameborder="0" allowfullscreen></iframe>

@@ -223,7 +223,7 @@ $ sudo apt-get install nodejs
       
     </hgroup>
     <article ><p>Cylon.js é uma framework javascript para robôs, física computacional, e
-Internet das Coisas. </p>
+Internet das Coisas.</p>
 <p>Plataformas suportadas:</p>
 <ul>
 <li>Arduino</li>
@@ -513,7 +513,7 @@ para aquele botão.</p></article>
       
       
     </hgroup>
-    <article ><p><object type="image/svg+xml" data="img/Sketch_bb.svg" 
+    <article ><p><object type="image/svg+xml" data="img/Sketch_bb.svg"
     width="900" border="1"></object></p></article>
  
 </slide>
@@ -565,17 +565,17 @@ serialPort.on('open',function() {
       
     </hgroup>
     <article ><pre class="prettyprint" data-lang="javascript">
-serialPort.on('data', function(data) {
+serialPort.on(<b>'data'</b>, function(data) {
 
     function callback(error, response, body) {
-        if (!error && response.statusCode === 200) {
-            api.parseAndSend(data);
+        if (!error && <b>response.statusCode === 200</b>) {
+            <b>api.parseAndSend(data);</b>
         } else {
             console.log(error);
         }
     }
 
-    api.send('ping', [], callback);
+    api.send(<b>'ping'</b>, [], callback);
 });
 </pre></article>
  
@@ -671,6 +671,18 @@ Api.prototype.handlePlayer = function(cmd) {
     </hgroup>
     <article class="flexbox vcenter"><h2><a href="https://github.com/comsolid/arduino-javascript-slides">github.com/comsolid/arduino-javascript-slides</a></h2>
 <p><img alt="arduino-javascript-slides" src="img/arduino-javascript-slides-repo-qrcode.gif" style="width: 130%" class="center" /></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      
+      <h2>Demo</h2>
+      
+      
+    </hgroup>
+    <article ><iframe width="560" height="315" src="https://www.youtube.com/embed/XdGIXM8NkCI" frameborder="0" allowfullscreen></iframe></article>
  
 </slide>
 
